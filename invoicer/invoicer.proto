@@ -1,0 +1,18 @@
+syntax = "proto3";
+option go_package = "github.com/MateusRico0/gRPC-basics/invoicer";
+
+
+
+message CreateRequest{
+    int64 number = 1;
+}
+
+message CreateResponse{
+    string x = 1;
+}
+
+
+service invoicer{
+    rpc Create(CreateRequest) returns (CreateResponse);
+}
+
